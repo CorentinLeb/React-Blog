@@ -1,0 +1,42 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: midnightblue;
+    color: white;
+    width: 50%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+#post-content {
+    padding: 10px;
+    width: 40%;
+    border-radius: 10px;
+}
+
+#post-title {
+    padding: 10px;
+    width: 25%;
+    border-radius: 10px;
+}
+
+#post-tags {
+    padding: 10px;
+    width: 15%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+#go-btn {
+    width: 10%;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+label {
+    font-size: 2rem;
+}
