@@ -16,7 +16,7 @@ const routes=[
 
 function App() {
   return ( 
-    <Router>
+  <Router>
     <headers>
       <Navbar/>
     </headers>
@@ -35,7 +35,7 @@ function App() {
           </Switch>
       </section>
     </main>
-    </Router>
+  </Router>
 
   );
 }

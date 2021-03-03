@@ -5,6 +5,7 @@ import Form from '../components/form'
 import Article from '../components/Article'
 import{NavLink} from'react-router-dom'
 import axios from 'axios';
+import Single from './Single';
 
 
 const url = "http://localhost:3000/api/v1/posts"
@@ -28,22 +29,20 @@ const Blog = () => {
         <Router>
             <h1>BLOG</h1>
             <button><NavLink to="/blog">Les articles</NavLink></button>
-
             <button><NavLink to="blog/form">créer un article</NavLink></button>
-            <Switch>
-                <Route path="/blog" key="/blog" exact>
-                    <Article posts={posts} />
-                </Route>
-                <Route path = {url} exact>
-                    {console.log({url})}
-                    <div>
-                        Plus la
-                    </div>
-                </Route>
+        <Switch>
                 <Route path="/blog/form" exact>
                     <Form/>
                 </Route>
-            </Switch>
+                <Route path="/blog/:title" key="/Single">
+                    <Single/>
+                </Route>
+                <Route path="/blog" key="/blog" exact>
+                    <Article posts={posts} />
+                </Route>
+
+
+        </Switch>
         </Router>
         </>
     )
